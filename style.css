@@ -1,0 +1,50 @@
+:root {
+    --light-text-colour: #fff;
+    --footer-colour: #353535;
+    --main-colour: #895baf;
+    --link-colour: #f56a6a;
+    --link-hover-colour: #AF5BAB;
+    --button-colour: #f56a6a;
+    --button-hover-colour: #d3d3d3;
+
+    --font-small: 0.75rem;
+    --font-regular: 1.05rem;
+    --font-medium: 1.15rem;
+    --font-large: 3.5rem;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-size: var(--font-regular);
+    overflow-x: hidden;
+    position: relative;
+}
+
+#navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 300px;
+}
+
+footer {
+    color: var(--light-text-colour);
+    background-color: var(--footer-colour);
+    font-size: var(--font-small);
+    min-height: 11vh;
+}
+
+footer a {
+    color: var(--link-colour);
+}
+
+footer a:hover {
+    color: var(--link-hover-colour);
+}
+
+@media (max-width: 400px) {
+    
+}
