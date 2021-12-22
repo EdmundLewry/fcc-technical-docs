@@ -10,7 +10,7 @@
     --font-small: 0.75rem;
     --font-regular: 1.05rem;
     --font-medium: 1.15rem;
-    --font-large: 3.5rem;
+    --font-large: 2.25rem;
 }
 
 html,
@@ -20,6 +20,11 @@ body {
     font-size: var(--font-regular);
     overflow-x: hidden;
     position: relative;
+    font-family: 'Exo', sans-serif;
+}
+
+header {
+    font-size: var(--font-large);
 }
 
 #navbar {
@@ -28,13 +33,80 @@ body {
     top: 0;
     height: 100%;
     width: 300px;
+    background-color: antiquewhite;
+    border-right: black 2px solid;
+}
+
+.hidden {
+    display: none;
+}
+
+#navbar header {
+    text-align: center;
+}
+
+.navlinks {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+#contents {
+    display: none;
+    border: none;
+    background-color: transparent;
+    font-size: var(--font-regular);
+    color: var(--link-colour);
+    font-family: 'Exo', sans-serif;
+    margin: 10px auto;
+    padding: 10px;
+    position: relative;
+}
+
+#contents::before {
+    background: url(./images/triangle.svg);
+    content: "";
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    margin-right: 6px;
+    transform: rotate(90deg);
+    transform-origin: 50%;
+    transition: transform .2s ease-in;
+}
+
+#contents[aria-expanded=true]::before {
+    
+    transform: rotate(180deg);
+}
+
+.navlinks a {
+    text-decoration: none;
+    margin-bottom: 10px;
+    color: var(--link-colour);
+}
+
+.navlinks-mobile {
+    background-color: white;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+.navlinks-mobile.hidden {
+    display: none;
+}
+
+#main-doc {
+    margin-left: 310px;
 }
 
 footer {
     color: var(--light-text-colour);
     background-color: var(--footer-colour);
     font-size: var(--font-small);
-    min-height: 11vh;
+    min-height: 10vh;
+    margin-left: 300px;
 }
 
 footer a {
@@ -46,5 +118,26 @@ footer a:hover {
 }
 
 @media (max-width: 400px) {
-    
+    #navbar {
+        position: initial;
+        width: 100%;
+    }
+
+    #main-doc,
+    footer {
+        margin-left: 0;
+    }
+
+    #contents {
+        display: block;
+    }
+
+    .navlinks {
+        display: none;
+    }
+
+    .navlinks-mobile {
+        display: flex;
+        position: absolute;
+    }
 }

@@ -8,18 +8,31 @@
     <meta name="author" content="Edmund Lewry">
     <title>Freecode Camp Technical Documentation Project - Clear Blue Skies</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav id="navbar">
         <header>Topic</header>
-        <ul>
+        <div class="navlinks">
             <a href="#Section_1" class="nav-link">Section 1</a>
             <a href="#Section_2" class="nav-link">Section 2</a>
             <a href="#Section_3" class="nav-link">Section 3</a>
             <a href="#Section_4" class="nav-link">Section 4</a>
             <a href="#Section_5" class="nav-link">Section 5</a>
-        </ul>
+        </div>
+        
+        <button id="contents" type="button" aria-expanded="false">Contents</button>
+
+        <div class="navlinks navlinks-mobile hidden">
+            <a href="#Section_1" class="nav-link">Section 1</a>
+            <a href="#Section_2" class="nav-link">Section 2</a>
+            <a href="#Section_3" class="nav-link">Section 3</a>
+            <a href="#Section_4" class="nav-link">Section 4</a>
+            <a href="#Section_5" class="nav-link">Section 5</a>
+        </div>
     </nav>
     <main id="main-doc">
         <section class="main-section" id="Section_1">
@@ -74,5 +87,7 @@
             <p>From the Freecode Camp <a href="https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-technical-documentation-page">Technical Documentation Project</a></p>
         </div>
     </footer>
+
+    <script src="./button.js"></script>
 </body>
 </html>
