@@ -15,70 +15,114 @@
 </head>
 <body>
     <nav id="navbar">
-        <header>Topic</header>
+        <header>DND 5E: Combat Primer</header>
         <div class="navlinks">
-            <a href="#Section_1" class="nav-link">Section 1</a>
-            <a href="#Section_2" class="nav-link">Section 2</a>
-            <a href="#Section_3" class="nav-link">Section 3</a>
-            <a href="#Section_4" class="nav-link">Section 4</a>
-            <a href="#Section_5" class="nav-link">Section 5</a>
+            <a href="#Introduction" class="nav-link">Introduction</a>
+            <a href="#Setting_up_Combat" class="nav-link">Setting up Combat</a>
+            <a href="#Playing_a_Turn" class="nav-link">Playing a Turn</a>
+            <a href="#Attacking" class="nav-link">Attacking</a>
+            <a href="#Action_Reference" class="nav-link">Action Reference</a>
         </div>
         
         <button id="contents" type="button" aria-expanded="false">Contents</button>
 
         <div class="navlinks navlinks-mobile hidden">
-            <a href="#Section_1" class="nav-link">Section 1</a>
-            <a href="#Section_2" class="nav-link">Section 2</a>
-            <a href="#Section_3" class="nav-link">Section 3</a>
-            <a href="#Section_4" class="nav-link">Section 4</a>
-            <a href="#Section_5" class="nav-link">Section 5</a>
+            <a href="#Introduction">Introduction</a>
+            <a href="#Setting_up_Combat">Setting up Combat</a>
+            <a href="#Playing_a_Turn">Playing a Turn</a>
+            <a href="#Attacking">Attacking</a>
+            <a href="#Action_Reference">Action Reference</a>
         </div>
     </nav>
-    <main id="main-doc">
-        <section class="main-section" id="Section_1">
-            <header>Section 1</header>
-            <p></p>
-            <p></p>
-            <code></code>
+    <main id="main-doc" class="container">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <p>Combat can be a big element in Dungeons and Dragons 5E, the table top roleplaying game by Wizards of the Coast. It can be the source of a lot of joy as well, but sometimes it can take a lot to get your head around all the mechanics; especially if it's your first time.</p>
+            <p>This web page aims to help by providing a set of steps and references for running combat in one handy place. This isn't an exhaustive list by any means, but by providing a quick run down with some helpful examples, I hope it can help you to enjoy running a combat. Remember! The aim is to have fun! You don't have to get all the rules perfect (unless you really want to). Just having the structure and then adding your particular flair to it is enough.</p>
+            <p>To that end, examples will be provided throughout the sections. Where calculations or instructions are required, they will be provided in slightly different excerpts such as:</p>
+            <code>Armour Class (AC) = 10 + [Dexterity]</code>
+            <p>There are a number of abbreviations that we'll use in the text as well. These are listed below:</p>
             <ul>
-                <li></li>
+                <li>D4, D6, D8, D10, D12, D20 - This represents rolling a dice. The number is the number of sides on the dice you'll roll.</li>
+                <li>DEX - Dexterity</li>
+                <li>STR - Strength</li>
+                <li>CON - Constitution</li>
+                <li>WIS - Wisdom</li>
+                <li>INT - Intelligence</li>
+                <li>CHA - Charisma</li>
+                <li>AC - Armour Class</li>
             </ul>
         </section>
-        <section class="main-section" id="Section_2">
-            <header>Section 2</header>
-            <p></p>
-            <p></p>
-            <code></code>
+        <section class="main-section" id="Setting_up_Combat">
+            <header>Setting up Combat</header>
+            <p>To set up a combat, we need to do the following things:</p>
             <ul>
-                <li></li>
+                <li>Identiify all the Player Characters and Enemy Characters</li>
+                <li>Find all the Characters statistics</li>
+                <li>Roll Initiative to decide the turn order</li>
+                <li>Decide on the map</li>
             </ul>
+            <p>A combat requires a number of enemy characters and a number player characters. Each character has a set of statistics associated with them. For player characters, this is the statistics that live on their character sheet. For enemies this is a "stat block" provided by the DnD rule book. These can be found in the Monster Manual or online in <a href="https://www.dndbeyond.com/homebrew/monsters">DnD Beyond's Monster List</a> or <a href="https://roll20.net/compendium/dnd5e/Monsters%20List#content">Roll20's Monster List</a>.</p>
+            <p>Once you have stat block for each character, the first thing to decide in a combat is who goes first! Combat in DnD 5E is turn based. Everyone gets to take a go, choose what to do, and see the effects. Once the turn is over, the next character gets a turn and can build on that. To choose who goes first, every character "rolls for initiative". To this, everyone rolls a D20 and adds their initiative modifier. This represents how on the ball the people in the battle are, and so who is the fastest to react to the situation. This means our first calculation!</p>
+            <code>
+                Initiative Modifier = Dexterity Modifier + Any Character Traits which explicitly say they increase or decrease this score
+            </code>
+            <code>
+                Initiative Score = D20 + Initiative Modifier
+            </code>
+            <p>Characters take turns from the highest initiative score to the lowest. The order of the list of characters is called the "Turn Order". When every character has had a turn, this is known as the "Round". When the "Round" is over, you return to the first character in the "Turn Order" and go down the list again, and so on until combat is over.</p>
+            <p>The last thing to tackle is the map. We need to decide where the battle is taking place. This can be done on grid of squares or it can be done in your imagination. You just need to know roughly how big the space is, if there are any obstacles and where abouts their located, and where the characters are in relation to each other. With that you're ready to fight!</p>
         </section>
-        <section class="main-section" id="Section_3">
-            <header>Section 3</header>
-            <p></p>
-            <p></p>
-            <code></code>
+        <section class="main-section" id="Playing_a_Turn">
+            <header>Playing a Turn</header>
+            <p>In DnD 5E a turn consists of 3 things:</p>
             <ul>
-                <li></li>
+                <li><em>A Standard Action</em> - Major things such as lifting a boulder, attempting to swipe at something with a sword, or using an impressive spell</li>
+                <li><em>A Bonus Action</em> - Small things such as finding something in your bag, taking a swig of a drink, or muttering a simple spell</li>
+                <li><em>Movement</em> - All the moving around you can muster in a round</li>
             </ul>
+            <p>In a normal turn, a character can do one Standard Action, one Bonus Action, and move up to their Speed.</p>
+            <p>I'll provide an action reference in a section below, as a quick thing to check what kinds of things you can do with your standard and bonus action.</p>
+            <p>Movement is the amount of ground you can cover in a single turn. It's represented in feet. So if you have a Speed of 25, you can move 25ft in a turn. You don't have to use all your movement at once. This means that you could use part of your speed, perform some actions, and then move the rest. Or you could choose to move your whole speed at once, and then use your actions.</p>
+            <p>An example turn might look like the following:</p>
+            <code>You stand, sword in hand, a Dragon 15ft away from you</code>
+            <code>You close the gap to the dragon, using 15ft of your 25ft Speed [Movement]</code>
+            <code>You swing your sword, connecting with the dragon [Standard Action]</code>
+            <code>You search through your bag for potion and bring it out, ready to drink or throw next turn [Bonus Action]</code>
+            <code>You decide you're done for the turn and end it there</code>
+            <p>Notice in the above example, there was still 10ft a movement left. You don't have to take all your movement. You also don't have to spend your Standard Action or Bonus Action.</p>
         </section>
-        <section class="main-section" id="Section_4">
-            <header>Section 4</header>
-            <p></p>
-            <p></p>
-            <code></code>
+        <section class="main-section" id="Attacking">
+            <header>Attacking</header>
+            <p>The general aim of combat in DnD 5E is incapacitate your opponents before they do the same to you. To do this, you must bring enemy character's "Health" to 0 before your own Health hits 0. Health is a statistic on your character sheet and is defined by your class and your CON score. Enemies will have a suggested health in their statistic block.</p>
+            <p>To reduce an opponents health you must deal damage to them by attacking either physically or with magic. Attacking comes in two forms:</p>
             <ul>
-                <li></li>
+                <li>Contest vs AC</li>
+                <li>Saving Throw</li>
             </ul>
+            <p>In Contest vs AC, you make an attack using your weapon or some kind of spell or power. Depending on what you're using, you'll need to use a different ability score. For heavy weaponry, the ability is Strength. For fine pointed deliberate weaponry and ranged weapons that require precision, the skill is Dexterity. For magic, this depends on the kind of magic wielder you are. Your character sheet will define your "spell casting ability" and this is the ability whose modifier you'll use when calculating your attacks and damage.</p>
+            <p>It's not just raw power that defines how well you hit. There's also learned skill in the form of "Proficiency". If you are "Proficient" in a weapon, you can add a fixed bonus defined by your level to the roll as well. The final component is a little luck. So when you make an attack you roll a D20. Once you add all these numbers together, you're trying to compare it to the targets Armour Class (AC). If it's the same or better, you hit!</p>
+            <code>Successful Attack = D20 + Attacking Ability Modifier + Proficiency Bonus >= Target AC</code>
+            <p>Once you've got a successful hit, you can deal damage. Damage is defined by the weapon or the spell you used. For spells it will tell you how to deal damage. For weapons, the weapon will have a die listed in the Player Handbook. Roll this and add the attacking modifier (no Proficiency this time) to get the damage dealt.</p>
+            <code>Damage = Weapon/Spell Die + Attacking Modifier</code>
+            <p>For Saving Throw abilities, the onus is on the other character to get out of the way rather than for you to score a hit. In these cases the spell or power will specify a target Difficulty Score (DC) and an ability the target has to use to escape. If the target reaches the DC or higher, they escape and the spell will tell you the effects.</p>
+            <code>Saving Throw Success = D20 + Specified Ability Modifier</code>
         </section>
-        <section class="main-section" id="Section_5">
-            <header>Section 5</header>
-            <p></p>
-            <p></p>
-            <code></code>
+        <section class="main-section" id="Action_Reference">
+            <header>Action Reference</header>
+            <p>DnD 5E is a table top roleplaying game, played with real people. And one of the joys of this kind of game is that you're only bound by your imagination. This means that you can try to do basically anything that you think makes sense, even if there's no rule for it. This can still work as an action or bonus action and it'll be up to your Dungeon Master (DM) to decide which it is.</p>
+            <p>That being said, the rules of the game do specify a number of actions and bonus actions that you can take. Some of these are listed below:</p>
             <ul>
-                <li></li>
+                <li>Attack</li>
+                <li>Dodge</li>
+                <li>Grapple</li>
+                <li>Escape a Grapple</li>
+                <li>Dash</li>
+                <li>Disengage</li>
+                <li>Help</li>
+                <li>Hide</li>
             </ul>
+            <p>Roll20 has a handy summary page of <a href="https://roll20.net/compendium/dnd5e/Rules:Combat/#h-Actions%20in%20Combat">Actions in Combat</a> which list all the options and how they work, for more information.</p>
         </section>
     </main>
     <footer>

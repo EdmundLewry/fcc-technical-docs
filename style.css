@@ -1,8 +1,9 @@
 :root {
     --light-text-colour: #fff;
     --footer-colour: #353535;
-    --main-colour: #895baf;
-    --link-colour: #f56a6a;
+    --main-colour: antiquewhite;
+    --secondary-colour: white;
+    --link-colour: #074f8d;
     --link-hover-colour: #AF5BAB;
     --button-colour: #f56a6a;
     --button-hover-colour: #d3d3d3;
@@ -33,8 +34,9 @@ header {
     top: 0;
     height: 100%;
     width: 300px;
-    background-color: antiquewhite;
     border-right: black 2px solid;
+    border-bottom: black 2px solid;
+    background-image: url(./images/background_light.png);
 }
 
 .hidden {
@@ -76,18 +78,24 @@ header {
 }
 
 #contents[aria-expanded=true]::before {
-    
     transform: rotate(180deg);
 }
 
 .navlinks a {
     text-decoration: none;
     margin-bottom: 10px;
+    padding: 10px 20px;
     color: var(--link-colour);
+    transition: transform 100ms ease-in-out;
+}
+
+.navlinks a:hover {
+    transform: translateX(10px);
+    text-decoration: underline;
 }
 
 .navlinks-mobile {
-    background-color: white;
+    background-color: var(--secondary-colour);
     margin: 0 auto;
     width: 100%;
     text-align: center;
@@ -101,6 +109,18 @@ header {
     margin-left: 310px;
 }
 
+section {
+    margin-bottom: 40px;
+}
+
+code {
+    background-color: var(--footer-colour);
+    padding: 10px;
+    color: var(--light-text-colour);
+    font-family: "consolas", sans-serif;
+    display: block;
+}
+
 footer {
     color: var(--light-text-colour);
     background-color: var(--footer-colour);
@@ -110,11 +130,15 @@ footer {
 }
 
 footer a {
-    color: var(--link-colour);
+    color: var(--button-colour);
 }
 
 footer a:hover {
     color: var(--link-hover-colour);
+}
+
+.container {
+    padding: 20px;
 }
 
 @media (max-width: 400px) {
